@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: sl_template
+Version: 0.0.1
+Summary: Template for supervised learning
+Author-email: Corey Bevan <corey.bevan@googlemail.com>
+Project-URL: Homepage, https://github.com/CB2702/supervised_learning_template
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+
+# template supervised learning repo
+Enter a more appropriate readme. Make my day.

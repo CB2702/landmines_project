@@ -3,9 +3,9 @@ import sys
 import os
 sys.path.insert(1, os.getcwd())
 import pandas as pd
-from packages.rename.ml_ops.data_import.data_import import run_import_data
-from packages.rename.ml_ops.data_processing.data_processing import run_data_processing
-from packages.rename.ml_ops.training.train import run_model_training
+from packages.landmines.ml_ops.data_import.data_import import run_import_data
+from packages.landmines.ml_ops.data_processing.data_processing import run_data_processing
+from packages.landmines.ml_ops.training.train import run_model_training
 
 path = 'rename'
 print(f'Importing data from {path}.')
