@@ -7,9 +7,9 @@ from packages.landmines.ml_ops.data_import.data_import import run_import_data
 from packages.landmines.ml_ops.data_processing.data_processing import run_data_processing
 from packages.landmines.ml_ops.training.train import run_model_training
 
-path = 'rename'
+path = 'data\Mine_Dataset.xls'
 print(f'Importing data from {path}.')
-df = run_import_data(path = path, name = 'mushrooms')
+df = run_import_data(path = path, sheet_name = 'Normalized_Data', name = 'landmines')
 print('Successfully imported data! See head sample below:')
 print(df.head())
 
@@ -19,5 +19,5 @@ print('Successfully run feature engineering for dataset! See head sample below:'
 print(df.head())
 
 print('Running model training. This may take some time.')
-model = run_model_training(df, 0.3, 0.5)
+bc_model, mc_model = run_model_training(df, 0.3, 0.5)
 print('Successfully completed model training.')
