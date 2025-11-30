@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Corey/personal_code/landmines_project/mlruns/827764661588969671/models/m-c8dc65dab55c4a0184b4bb5e79028440/artifacts
+creation_timestamp: 1764536616102
+experiment_id: '827764661588969671'
+last_updated_timestamp: 1764536626897
+model_id: m-c8dc65dab55c4a0184b4bb5e79028440
+model_type: null
+name: model
+source_run_id: 4337c88422684a5294150356707c8967
+status: 2
+status_message: null
