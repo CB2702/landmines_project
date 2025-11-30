@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+packages/__init__.py
+sl_template.egg-info/PKG-INFO
+sl_template.egg-info/SOURCES.txt
+sl_template.egg-info/dependency_links.txt
+sl_template.egg-info/requires.txt
+sl_template.egg-info/top_level.txt

@@ -1,0 +1,29 @@
+artifact_path: file:///C:/Users/Corey/personal_code/landmines_project/mlruns/827764661588969671/models/m-5b559d38b8d54061a630fa2d710988b0/artifacts
+flavors:
+  python_function:
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.tensorflow
+    python_version: 3.12.9
+  tensorflow:
+    code: null
+    data: data
+    keras_version: 2.19.0
+    model_type: keras
+    save_format: tf
+is_signature_from_type_hint: false
+mlflow_version: 3.6.0
+model_id: m-5b559d38b8d54061a630fa2d710988b0
+model_size_bytes: 57134
+model_uuid: m-5b559d38b8d54061a630fa2d710988b0
+prompts: null
+run_id: 4337c88422684a5294150356707c8967
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 7]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1,
+    1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-30 21:03:29.130194'
