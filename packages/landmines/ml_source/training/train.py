@@ -49,6 +49,7 @@ def prepare_dataset(df: pd.DataFrame, drop_cols: list, target_var: str, val_test
 
     # Prepare X
     X = df.drop(columns = drop_cols)
+    X_cols = X.columns
     if scale:
         X = scaler.fit_transform(X)
 
@@ -61,9 +62,8 @@ def prepare_dataset(df: pd.DataFrame, drop_cols: list, target_var: str, val_test
     X_train = tf.convert_to_tensor(X_train)
     X_val = tf.convert_to_tensor(X_val)
     y_train = np.array(y_train)
-    y_test = np.array(y_val)
 
-    return df, X_train, X_val, y_train, y_val
+    return df, X_train, X_val, y_train, y_val, X_cols
 
 def train_model(model, X_train, y_train, epochs = 100):
     # Change this at will!
@@ -74,6 +74,14 @@ def train_model(model, X_train, y_train, epochs = 100):
 def evaluate_model(model, X_val, y_val):
     results = model.evaluate(X_val, y_val)
     return results
+
+def perform_inference(model, X_val, y_val, X_col_names):
+    results = model.predict(X_val)
+    validation_table = pd.DataFrame(np.array(X_val), columns=X_col_names)
+    validation_table['y'] = np.array(y_val)
+    validation_table['y_hat'] = np.array(results)
+
+    return validation_table
 
 def build_conf_matrix(model, X_val, y_val, fig_name):
     y_pred_prob = model.predict(X_val)
