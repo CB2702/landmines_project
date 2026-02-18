@@ -5,3 +5,5 @@ xgboost
 tensorflow
 plotly-express
 streamlit
+matplotlib
+seaborn
