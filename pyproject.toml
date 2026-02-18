@@ -22,7 +22,8 @@ dependencies = [
     "seaborn",
     "plotly-express",
     "streamlit", 
-    "tensorflow"
+    "tensorflow",
+    "mlflow"
 ]
 
 [project.urls]
