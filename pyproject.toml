@@ -17,7 +17,12 @@ dependencies = [
     "numpy",
     "pandas",
     "scikit-learn",
-    "xgboost"
+    "xgboost",
+    "matplotlib",
+    "seaborn",
+    "plotly-express",
+    "streamlit", 
+    "tensorflow"
 ]
 
 [project.urls]
