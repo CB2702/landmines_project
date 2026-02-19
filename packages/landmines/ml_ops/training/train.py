@@ -1,18 +1,20 @@
 import sys
 import os
+import numpy as np
 sys.path.insert(1, os.getcwd())
 from packages.landmines.ml_source.training.train import prepare_dataset, train_model, evaluate_model, build_binary_classifier_model, build_multiclass_classifier_model, build_conf_matrix
 
 def run_model_training(df, test_val_size, test_size):
     print('Splitting binary data into training, validation and testing sets.')
+    seed = np.random.randint(1, 100)
     try:
         df_bc = df.copy()
-        df_bc, X_train_bc, X_val_bc, y_train_bc, y_val_bc = prepare_dataset(df, ['is_M', 'M'], 'is_M', test_val_size, test_size, scale = True, encode=False)
+        df_bc, X_train_bc, X_val_bc, y_train_bc, y_val_bc = prepare_dataset(df, ['is_M', 'M'], 'is_M', test_val_size, test_size, scale = True, encode=False, seed=seed)
     except:
         raise Exception('There was an issue with the splitting of the binary classification data.')
     try:
         df_mc = df.copy()
-        df_mc, X_train_mc, X_val_mc, y_train_mc, y_val_mc = prepare_dataset(df, ['is_M', 'M'], 'M', test_val_size, test_size, scale = True, encode=True)
+        df_mc, X_train_mc, X_val_mc, y_train_mc, y_val_mc = prepare_dataset(df, ['is_M', 'M'], 'M', test_val_size, test_size, scale = True, encode=True, seed=seed)
     except:
         raise Exception('There was an issue with the splitting of the multiclass classification data.')
     print('Done. See below for binary classifier model input:')
